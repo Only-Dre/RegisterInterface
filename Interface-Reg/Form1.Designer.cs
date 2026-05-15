@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridView dgvItens;
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -40,9 +41,9 @@
             this.btnListar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.dgvItens = new System.Windows.Forms.DataGridView();
+            dgvItens = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(dgvItens)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -158,19 +159,21 @@
             // 
             // dgvItens
             // 
-            this.dgvItens.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dgvItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvItens.Location = new System.Drawing.Point(38, 288);
-            this.dgvItens.Name = "dgvItens";
-            this.dgvItens.Size = new System.Drawing.Size(722, 150);
-            this.dgvItens.TabIndex = 11;
+            dgvItens.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dgvItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvItens.Location = new System.Drawing.Point(38, 288);
+            dgvItens.Name = "dgvItens";
+            dgvItens.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dgvItens.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dgvItens.Size = new System.Drawing.Size(722, 150);
+            dgvItens.TabIndex = 11;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvItens);
+            this.Controls.Add(dgvItens);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnListar);
@@ -186,7 +189,7 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(dgvItens)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,7 +209,6 @@
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.DataGridView dgvItens;
     }
 }
 
